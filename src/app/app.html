@@ -165,12 +165,13 @@
           placeholder="Ingresa tu nombre"
           maxlength="60"
           autocomplete="name"
+          (input)="nombreClienteValue = $any($event.target).value"
         />
 
         <button
           class="checkout-button"
-          [disabled]="carrito.length === 0 || !nombreCliente.value.trim()"
-          (click)="confirmarPedido(nombreCliente.value)">
+          [disabled]="carrito.length === 0 || !nombreClienteValue.trim()"
+          (click)="confirmarPedido(nombreClienteValue)">
           Confirmar pedido
         </button>
 

@@ -55,7 +55,7 @@ export class App {
   carrito: ProductoCarrito[] = [];
   pedidos: Pedido[] = [];
   pedidoReciente: Pedido | null = null;
-
+  nombreClienteValue = '';
   constructor() {
     this.cargarDatos();
   }
